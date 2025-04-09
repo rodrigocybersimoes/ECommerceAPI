@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\fic\\source\\repos\\ecommerceapi\\ecommerceapi\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\fic\\source\\repos\\ecommerceapi\\ecommerceapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\fic\\source\\repos\\ecommerceapi\\ecommerceapi\\interfaces\\iprodutorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\interfaces\\iprodutorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IProdutoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Interfaces\\IProdutoRepository.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI\\Interfaces\\IProdutoRepository.cs",
+              "ToolTip": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Interfaces\\IProdutoRepository.cs",
+              "RelativeToolTip": "ECommerceAPI\\Interfaces\\IProdutoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T00:50:25.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI\\Models\\Cliente.cs",
+              "ToolTip": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Models\\Cliente.cs",
+              "RelativeToolTip": "ECommerceAPI\\Models\\Cliente.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T00:36:52.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Program.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Program.cs",
+              "RelativeToolTip": "ECommerceAPI\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T22:26:03.972Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
