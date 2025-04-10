@@ -2,25 +2,24 @@
 
 namespace ECommerceAPI.Interfaces
 {
-    // AQUI EU SO MOSTRO O QUE OS METODOS VAO FAZER, E SO UM CONTRATO.
-    public interface IProdutoRepository
+    public interface IClienteRepository
     {
         // R - READ (Leitura)
         // Retorno
-        List<Produto> ListarTodos();
+        List<Cliente> ListarTodos();
 
         // RECEBE UM IDENTIFICADOR E RETORNA O PRODUTO CORRESPONDENTE (Leitura)
-        Produto BuscarPorId(int id);
+        Cliente BuscarPorId(int id);
+        Cliente BuscarPorEmailSenha(string email, string senha);
 
         // C - CREATE (Cadastro)
-        void Cadastrar(Produto produto);
+        void Cadastrar(Cliente cliente);
 
         // U - ATUALIZAR (Coloco quem quero atualizar e qual sera o novo produto que vai substituir o antigo)
-        void Atualizar(int id, Produto produto);
+        void Atualizar(int id, Cliente cliente);
 
         // D - Deletar
         // Recebo o identificador dr quem quero excluir
         void Deletar(int id);
-
     }
 }

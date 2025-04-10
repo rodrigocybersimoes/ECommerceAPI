@@ -1,7 +1,15 @@
 
 //Essas tres linhas nunca podem ser apagadas para rodar a API
+using ECommerceAPI.Context;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers();
+builder.Services.AddTransient<EcommerceContext, EcommerceContext>();
+
 var app = builder.Build();
+
+app.MapControllers();
 
 app.Run();
 
@@ -12,8 +20,17 @@ app.Run();
 
 //Instala as ferramentas de terminal do Entity Framework (executar em um terminal)
 //QUANDO ESTIVER USANDO O SQL SERVER
+// PARA CRIAR AS PASTAS Context (REPRESENTACAO DO BANCO DE DADOS) e Models (ENTIDADES: COLUNAS DO BD):
 //dotnet ef dbcontext scaffold "Data Source=NOME DO SERVIDOR DE SQL;Initial Catalog=NOME DO PROJETO EM SQL;User Id=USUARIO USADO NO SERVIDOR SQL;Password=SENHA DO SERVIDOR DE SQL;TrustServerCertificate=true;" Microsoft.EntityFrameworkCore.SqlServer --context-dir Context --output-dir Models
 
 
 //Caso de erro referente a design do Enitity, colocar essa linha dentro da pasta principal dando dois cliques nela
 //GenerateRuntimeConfigurationFiles > True </ GenerateRuntimeConfigurationFiles >
+// Ordem de criacao:
+// 1. INTERFACE
+// 2. REPOSITORY
+// 3. CONTROLLER
+
+// COMECANDO A FAZER O CRUD (CREATE; READ; UPDATE; DELETE) - IMPORTANTISSIMO SABER!!!!!!
+
+// 
