@@ -2,7 +2,7 @@
 
 namespace ECommerceAPI.Interfaces
 {
-    public interface IPedidoRepository
+    public interface IItemPedidoRepository
     {
         // R - READ (Leitura)
         // Retorno

@@ -3,28 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\fic\\source\\repos\\ecommerceapi\\ecommerceapi\\repositories\\pagamentorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\repositories\\pagamentorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\fic\\source\\repos\\ecommerceapi\\ecommerceapi\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\repositories\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\fic\\source\\repos\\ecommerceapi\\ecommerceapi\\repositories\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\repositories\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\fic\\source\\repos\\ecommerceapi\\ecommerceapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\fic\\source\\repos\\ecommerceapi\\ecommerceapi\\interfaces\\iprodutorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\interfaces\\iprodutorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\fic\\source\\repos\\ecommerceapi\\ecommerceapi\\interfaces\\iclienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\interfaces\\iclienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\fic\\source\\repos\\ecommerceapi\\ecommerceapi\\interfaces\\ipagamentorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\interfaces\\ipagamentorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\fic\\source\\repos\\ecommerceapi\\ecommerceapi\\interfaces\\iitempedidorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\interfaces\\iitempedidorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\fic\\source\\repos\\ecommerceapi\\ecommerceapi\\interfaces\\ipedidorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EFCB199-4269-4300-A8B8-401DD85CC240}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\interfaces\\ipedidorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,82 +26,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IPedidoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Interfaces\\IPedidoRepository.cs",
-              "RelativeDocumentMoniker": "ECommerceAPI\\Interfaces\\IPedidoRepository.cs",
-              "ToolTip": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Interfaces\\IPedidoRepository.cs",
-              "RelativeToolTip": "ECommerceAPI\\Interfaces\\IPedidoRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "PagamentoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Repositories\\PagamentoRepository.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI\\Repositories\\PagamentoRepository.cs",
+              "ToolTip": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Repositories\\PagamentoRepository.cs",
+              "RelativeToolTip": "ECommerceAPI\\Repositories\\PagamentoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T00:37:49.876Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IItemPedidoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Interfaces\\IItemPedidoRepository.cs",
-              "RelativeDocumentMoniker": "ECommerceAPI\\Interfaces\\IItemPedidoRepository.cs",
-              "ToolTip": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Interfaces\\IItemPedidoRepository.cs",
-              "RelativeToolTip": "ECommerceAPI\\Interfaces\\IItemPedidoRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T00:35:41.803Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IPagamentoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Interfaces\\IPagamentoRepository.cs",
-              "RelativeDocumentMoniker": "ECommerceAPI\\Interfaces\\IPagamentoRepository.cs",
-              "ToolTip": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Interfaces\\IPagamentoRepository.cs",
-              "RelativeToolTip": "ECommerceAPI\\Interfaces\\IPagamentoRepository.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBUAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T00:32:11.524Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IClienteRepository.cs",
-              "DocumentMoniker": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Interfaces\\IClienteRepository.cs",
-              "RelativeDocumentMoniker": "ECommerceAPI\\Interfaces\\IClienteRepository.cs",
-              "ToolTip": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Interfaces\\IClienteRepository.cs",
-              "RelativeToolTip": "ECommerceAPI\\Interfaces\\IClienteRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T00:28:04.804Z",
+              "WhenOpened": "2025-04-11T00:49:21.23Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IProdutoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Interfaces\\IProdutoRepository.cs",
-              "RelativeDocumentMoniker": "ECommerceAPI\\Interfaces\\IProdutoRepository.cs",
-              "ToolTip": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Interfaces\\IProdutoRepository.cs",
-              "RelativeToolTip": "ECommerceAPI\\Interfaces\\IProdutoRepository.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwA4AAAAgAAAAAAAAAA==",
+              "Title": "ClienteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Repositories\\ClienteRepository.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI\\Repositories\\ClienteRepository.cs",
+              "ToolTip": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Repositories\\ClienteRepository.cs",
+              "RelativeToolTip": "ECommerceAPI\\Repositories\\ClienteRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T00:50:25.781Z",
+              "WhenOpened": "2025-04-11T00:36:24.083Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "ProdutoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Repositories\\ProdutoRepository.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI\\Repositories\\ProdutoRepository.cs",
+              "ToolTip": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Repositories\\ProdutoRepository.cs",
+              "RelativeToolTip": "ECommerceAPI\\Repositories\\ProdutoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T00:24:07.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Program.cs",
               "RelativeDocumentMoniker": "ECommerceAPI\\Program.cs",
               "ToolTip": "C:\\Users\\fic\\source\\repos\\ECommerceAPI\\ECommerceAPI\\Program.cs",
               "RelativeToolTip": "ECommerceAPI\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-08T22:26:03.972Z",
               "EditorCaption": ""

@@ -12,7 +12,7 @@ namespace ECommerceAPI.Repositories
         private readonly EcommerceContext _context; // Objeto chamado _context
         
         // METODO CONSTRUTOR - QUANDO CRIAR UM OBJETO, O QUE EU PRECISO TER? E O METODO CONSTRUTOR QUEM DEFINE.
-        public ProdutoRepository(EcommerceContext context) // criado com o comando ctor
+        public ProdutoRepository(EcommerceContext context) // METODO CONSTRUTOR: criado com o comando ctor
         {
             _context = context;
         }

@@ -1,10 +1,9 @@
 
 //Essas tres linhas nunca podem ser apagadas para rodar a API
 using ECommerceAPI.Context;
-
 var builder = WebApplication.CreateBuilder(args);
-
 builder.Services.AddControllers();
+
 builder.Services.AddTransient<EcommerceContext, EcommerceContext>();
 
 var app = builder.Build();
@@ -33,4 +32,8 @@ app.Run();
 
 // COMECANDO A FAZER O CRUD (CREATE; READ; UPDATE; DELETE) - IMPORTANTISSIMO SABER!!!!!!
 
-// 
+// ORDEM UNIVERSAL PARA FAZER UMA API
+// 1. CONTEXT E MODELS
+// 2. INTERFACES
+// 3. REPOSITORYS
+// 4. CONTROLLERS
