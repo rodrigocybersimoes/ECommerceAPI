@@ -17,5 +17,15 @@ namespace ECommerceAPI.Controllers
             _context = context;
             _pagamentoRepository = new PagamentoRepository(_context);
         }
+
+        // 1. DEFINIR O VERBO
+        [HttpGet()]
+        //2. DEFINIR O RETORNO
+        public IActionResult ListarTodos()
+        {
+            return Ok(_pagamentoRepository.ListarTodos());
+        }
+
+
     }
 }

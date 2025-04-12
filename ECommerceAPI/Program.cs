@@ -4,11 +4,17 @@ using ECommerceAPI.Context;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
+builder.Services.AddSwaggerGen(); // DEPOIS QUE INSTALAR O SWASHEBUCKLE E SWASHEBUCLEUI
+
 builder.Services.AddTransient<EcommerceContext, EcommerceContext>();
 
 var app = builder.Build();
 
-app.MapControllers();
+app.UseSwagger(); // DEPOIS QUE INSTALAR O SWASHEBUCKLE E SWASHEBUCLEUI
+
+app.UseSwaggerUI(); // DEPOIS QUE INSTALAR O SWASHEBUCKLE E SWASHEBUCLEUI
+
+app.MapControllers(); // DEPOIS QUE INSTALAR O SWASHEBUCKLE E SWASHEBUCLEUI
 
 app.Run();
 
@@ -37,3 +43,10 @@ app.Run();
 // 2. INTERFACES
 // 3. REPOSITORYS
 // 4. CONTROLLERS
+
+// METODO CONSTRUTOR E UM METODO QUE TEM O MESMO NOME DA CLASSE.
+
+// O NAVEGADOR SO EXECUTA GET.
+
+// SWAGGER - DOCUMENTACAO DE APIs QUE DA PRA TESTAR O QUE NAO E GET (COMO O POST, DELETE E ALTERAR)
+

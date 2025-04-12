@@ -15,8 +15,8 @@ namespace ECommerceAPI.Repositories
 {//                                 2. Clicando em IClineteRepository segurando o cntrl e clicar em "Implementar a Interface"
     public class ClienteRepository : IClienteRepository // 1. HERDANDO DA INTERFACE
     {
-        private readonly EcommerceContext _context;
-        public ClienteRepository(EcommerceContext context)
+        private readonly EcommerceContext _context; // 3. INJETANDO O CONTEXTO
+        public ClienteRepository(EcommerceContext context) // METODO CONSTRUTOR
         {
             _context = context;
         }
@@ -38,7 +38,7 @@ namespace ECommerceAPI.Repositories
 
         public void Cadastrar(Cliente cliente)
         {
-            throw new NotImplementedException();
+            _context.Clientes.Add(cliente);
         }
 
         public void Deletar(int id)
@@ -48,7 +48,7 @@ namespace ECommerceAPI.Repositories
 
         public List<Cliente> ListarTodos()
         {
-            throw new NotImplementedException();
+            return _context.Clientes.ToList();
         }
     }
 }
