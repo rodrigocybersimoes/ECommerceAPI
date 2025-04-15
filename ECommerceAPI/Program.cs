@@ -1,20 +1,36 @@
 
 //Essas tres linhas nunca podem ser apagadas para rodar a API
 using ECommerceAPI.Context;
+using ECommerceAPI.Interfaces;
+using ECommerceAPI.Repositories;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 builder.Services.AddSwaggerGen(); // DEPOIS QUE INSTALAR O SWASHEBUCKLE E SWASHEBUCLEUI
 
-builder.Services.AddTransient<EcommerceContext, EcommerceContext>();
+// O .NET vai criar os OBJETOS (Injecao de Dependencia)
+// FORMAS DE CONFIGURAR:
+    // 1. AddTransient - O C# cria uma instancia nova toda vez que um metodo e chamado.
+    // 2. AddScoped - O C# cria uma instancia nova toda vez que criar um Controller.
+    // 3. AddSingleton - 
+
+builder.Services.AddScoped<EcommerceContext, EcommerceContext>();
+
+//Injecao de dependencia
+builder.Services.AddTransient<IProdutoRepository, ProdutoRepository>();
+builder.Services.AddTransient<IClienteRepository, ClienteRepository>();
+builder.Services.AddTransient<IPagamentoRepository, PagamentoRepository>();
+builder.Services.AddTransient<IItemPedidoRepository, ItemPedidoRepository>();
+builder.Services.AddTransient<IPedidoRepository, PedidoRepository>();
+
 
 var app = builder.Build();
 
-app.UseSwagger(); // DEPOIS QUE INSTALAR O SWASHEBUCKLE E SWASHEBUCLEUI
+app.UseSwagger(); // ESCREVER DEPOIS QUE INSTALAR O SWASHEBUCKLE E SWASHEBUCLEUI
 
-app.UseSwaggerUI(); // DEPOIS QUE INSTALAR O SWASHEBUCKLE E SWASHEBUCLEUI
+app.UseSwaggerUI(); // ESCREVER DEPOIS QUE INSTALAR O SWASHEBUCKLE E SWASHEBUCLEUI
 
-app.MapControllers(); // DEPOIS QUE INSTALAR O SWASHEBUCKLE E SWASHEBUCLEUI
+app.MapControllers(); // ESCREVER DEPOIS QUE INSTALAR O SWASHEBUCKLE E SWASHEBUCLEUI
 
 app.Run();
 
@@ -48,5 +64,5 @@ app.Run();
 
 // O NAVEGADOR SO EXECUTA GET.
 
-// SWAGGER - DOCUMENTACAO DE APIs QUE DA PRA TESTAR O QUE NAO E GET (COMO O POST, DELETE E ALTERAR)
+// SWAGGER - DOCUMENTACAO DE APIs QUE DA PRA TESTAR O QUE NAO E GET (COMO O POST, DELETE E UPDATE)
 

@@ -10,12 +10,10 @@ namespace ECommerceAPI.Controllers
     [ApiController]
     public class ClienteController : ControllerBase
     {
-        private readonly EcommerceContext _context;
         private IClienteRepository _clienteRepository;
-        public ClienteController(EcommerceContext context)
+        public ClienteController(IClienteRepository clienteRepository)
         {
-            _context = context;
-            _clienteRepository = new ClienteRepository(_context);
+            _clienteRepository = clienteRepository;
         }
 
         [HttpGet()]
