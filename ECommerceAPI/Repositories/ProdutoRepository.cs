@@ -1,6 +1,7 @@
 ﻿using ECommerceAPI.Context;
 using ECommerceAPI.Interfaces;
 using ECommerceAPI.Models;
+using Microsoft.AspNetCore.Http.Connections;
 
 namespace ECommerceAPI.Repositories
 {
@@ -20,12 +21,37 @@ namespace ECommerceAPI.Repositories
 
         public void Atualizar(int id, Produto produto)
         {
-            throw new NotImplementedException();
+            // 1. Achar o produto
+            Produto produtoRegistro = _context.Produtos.Find(id);
+
+            // 2. Caso me forneca um id que nao existe, mostrar um erro
+            if (produtoRegistro == null) 
+            {
+                throw new Exception();
+            }
+
+            // 3. Realizar as possiveis alteracoes
+            produtoRegistro.Descricao = produto.Descricao;
+            produtoRegistro.Preco = produto.Preco;
+            produtoRegistro.CategoriaProduto = produto.CategoriaProduto;
+            produtoRegistro.Imagem = produto.Imagem;
+            produtoRegistro.EstoqueDisponivel = produto.EstoqueDisponivel;
+
+            // 4. Salvar as alteracoes
+            _context.SaveChanges();
+
+
         }
 
         public Produto BuscarPorId(int id)
         {
-            throw new NotImplementedException();
+            //FirstorDefault - Traz o primeiro que encontrar ou null se nao achar nada
+            // Explicando:
+            // _context.Produtos - Acesse a tabela Produtos do Contexto
+            // FirstorDefault - Pegue o primeiro que encontrar
+            // p => p.Idproduto == id - Para cada produto P, me retorne aquele que tem o Idproduto igual ao id
+            //                                          Expressao Lambda
+            return _context.Produtos.FirstOrDefault(p => p.Idproduto == id);
         }
 
         public void Cadastrar(Produto produto)
@@ -38,11 +64,26 @@ namespace ECommerceAPI.Repositories
 
         public void Deletar(int id)
         {
-            throw new NotImplementedException();
+            // 1. Encontrar quem quero excluir
+            Produto produtoEcontrado = _context.Produtos.Find(id); // O Find so procura pela chave primaria
+
+            // 2. Tratar; se informar um id que nao existe mostra um erro
+            if (produtoEcontrado == null) 
+            {
+                throw new Exception();
+            }
+            
+            // 3. Excluir o produto
+            _context.Produtos.Remove(produtoEcontrado);
+
+            // 4. Salvando a alteracao
+            _context.SaveChanges();
+        
         }
 
         public List<Produto> ListarTodos()
         {
+            //ToList() - Pegar varios
             return _context.Produtos.ToList();
         }
     }

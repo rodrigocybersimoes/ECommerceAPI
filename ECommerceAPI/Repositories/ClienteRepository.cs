@@ -23,7 +23,8 @@ namespace ECommerceAPI.Repositories
 
         public void Atualizar(int id, Cliente cliente)
         {
-            throw new NotImplementedException();
+            
+
         }
 
         public Cliente BuscarPorEmailSenha(string email, string senha)

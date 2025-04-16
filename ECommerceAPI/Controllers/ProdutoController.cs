@@ -37,5 +37,55 @@ namespace ECommerceAPI.Controllers
                 // 201 - Created - codigo que informa que algo foi criado
             return Created();
         }
+
+        // 1. Buscar produto por id - /api/produtos/1 <-- id
+        [HttpGet("{id}")]
+        
+        // 2. Criar a funcao IActionResult
+        public IActionResult ListarPorId(int id)
+        {
+            // 3. Criando a variavel para receber o id envido
+            Produto produto = _produtoRepository.BuscarPorId(id);
+
+            // 4. Caso o produto nao seja encontrado mostrar o erro 404 - Not Found
+            if (produto == null) 
+            { 
+                return NotFound();
+            }
+            // Quando o produto e encontrado
+            return Ok(produto);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Editar(int id, Produto prod)
+        {
+            try
+            {
+                _produtoRepository.Atualizar(id, prod);
+                return Ok();
+            }
+            catch (Exception ex) 
+            {
+                return NotFound("Produto nao encontrado.");
+            }
+        }
+
+
+
+        [HttpDelete("{id}")]
+        public IActionResult Deletar(int id) 
+        {
+            try
+            {
+                _produtoRepository.Deletar(id);
+                // 204 - Deu certo
+                return NoContent();
+            }
+            // Caso de erro
+            catch (Exception ex) 
+            {
+                return NotFound("Produto nao encontrado");
+            }
+        }
     }
 }
