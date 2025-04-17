@@ -20,12 +20,6 @@ namespace ECommerceAPI.Controllers
         }
 
         // Listar na internet e chamado de GET, padrao da internet.
-        [HttpGet] // Padrao da internet, obrigado a escrever esta linha para sites.
-        public IActionResult ListarProdutos()
-        {
-            return Ok(_produtoRepository.ListarTodos());
-        }
-
         // CADASTRAR PRODUTO
         [HttpPost]
         public IActionResult CadastrarProduto(Produto prod)
@@ -70,7 +64,11 @@ namespace ECommerceAPI.Controllers
             }
         }
 
-
+        [HttpGet] // Padrao da internet, obrigado a escrever esta linha para sites.
+        public IActionResult ListarProdutos()
+        {
+            return Ok(_produtoRepository.ListarTodos());
+        }
 
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id) 
