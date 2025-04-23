@@ -45,12 +45,6 @@ namespace ECommerceAPI.Repositories
 
         public Produto BuscarPorId(int id)
         {
-            //FirstorDefault - Traz o primeiro que encontrar ou null se nao achar nada
-            // Explicando:
-            // _context.Produtos - Acesse a tabela Produtos do Contexto
-            // FirstorDefault - Pegue o primeiro que encontrar
-            // p => p.Idproduto == id - Para cada produto P, me retorne aquele que tem o Idproduto igual ao id
-            //                                          Expressao Lambda
             return _context.Produtos.FirstOrDefault(p => p.Idproduto == id);
         }
 

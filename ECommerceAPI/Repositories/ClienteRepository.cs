@@ -38,9 +38,9 @@ namespace ECommerceAPI.Repositories
 
         }
 
-        public Cliente BuscarPorEmailSenha(string email, string senha)
+        public Cliente? BuscarPorEmailSenha(string email, string senha)
         {
-            throw new NotImplementedException();
+            var clienteEncontrado = _context.Clientes.FirstOrDefault(c => c.Email == email && c.Senha == senha);
         }
 
         public Cliente BuscarPorId(int id)

@@ -25,6 +25,18 @@ namespace ECommerceAPI.Controllers
             return Created();
         }
 
+        [HttpGet("{email}/{senha}")]
+        public IActionResult Login(string email, string senha)
+        {
+            Cliente cliente = _clienteRepository.BuscarPorEmailSenha(email, senha);
+
+            if (cliente == null)
+            {
+                return NotFound();
+            }
+            return Ok(cliente);
+        }
+
         [HttpGet("{id}")]
         public IActionResult ListarPorId(int id)
         {
