@@ -1,4 +1,5 @@
 ﻿using ECommerceAPI.Context;
+using ECommerceAPI.DTO;
 using ECommerceAPI.Interfaces;
 using ECommerceAPI.Models;
 using ECommerceAPI.Repositories;
@@ -18,7 +19,7 @@ namespace ECommerceAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult CadastrarCliente(Cliente cliente)
+        public IActionResult CadastrarCliente(CadastrarClientesDto cliente)
         {
             _clienteRepository.Cadastrar(cliente);
 
@@ -28,7 +29,7 @@ namespace ECommerceAPI.Controllers
         [HttpGet("{email}/{senha}")]
         public IActionResult Login(string email, string senha)
         {
-            Cliente cliente = _clienteRepository.BuscarPorEmailSenha(email, senha);
+            Cliente? cliente = _clienteRepository.BuscarPorEmailSenha(email, senha);
 
             if (cliente == null)
             {
@@ -68,6 +69,13 @@ namespace ECommerceAPI.Controllers
         {
             return Ok(_clienteRepository.ListarTodos());
         }
+
+        [HttpGet ("/buscar/{nome}")]
+        public IActionResult BuscarPorNome(string nome) 
+        {
+            return Ok(_clienteRepository.BuscarClientePorNome(nome));
+        }
+        
 
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)

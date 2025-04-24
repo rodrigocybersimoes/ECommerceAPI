@@ -1,4 +1,5 @@
 ﻿using ECommerceAPI.Context;
+using ECommerceAPI.DTO;
 using ECommerceAPI.Interfaces;
 using ECommerceAPI.Models;
 using Microsoft.AspNetCore.Http.Connections;
@@ -11,7 +12,7 @@ namespace ECommerceAPI.Repositories
         // INJETAR O CONTEXT
         // INJECAO DE DEPENDENCIA (PEGAR UMA CLASSE E COLOCAR DENTRO DE OUTRA)
         private readonly EcommerceContext _context; // Objeto chamado _context
-        
+
         // METODO CONSTRUTOR - QUANDO CRIAR UM OBJETO, O QUE EU PRECISO TER? E O METODO CONSTRUTOR QUEM DEFINE.
         public ProdutoRepository(EcommerceContext context) // METODO CONSTRUTOR: criado com o comando ctor
         {
@@ -25,7 +26,7 @@ namespace ECommerceAPI.Repositories
             Produto produtoRegistro = _context.Produtos.Find(id);
 
             // 2. Caso me forneca um id que nao existe, mostrar um erro
-            if (produtoRegistro == null) 
+            if (produtoRegistro == null)
             {
                 throw new Exception();
             }
@@ -48,9 +49,20 @@ namespace ECommerceAPI.Repositories
             return _context.Produtos.FirstOrDefault(p => p.Idproduto == id);
         }
 
-        public void Cadastrar(Produto produto)
+        public void Cadastrar(CadastrarProdutoDto produtodto)
         {
-            _context.Produtos.Add(produto);
+            Produto produtoCadastro = new Produto
+            {
+                NomeProduto = produtodto.NomeProduto,
+                Descricao = produtodto.Descricao,
+                Preco = produtodto.Preco,
+                EstoqueDisponivel = produtodto.EstoqueDisponivel,
+                CategoriaProduto = produtodto.CategoriaProduto,
+                Imagem = produtodto.Imagem
+
+            };
+            
+            _context.Produtos.Add(produtoCadastro);
 
             // Salvar a alteracao
             _context.SaveChanges();
@@ -62,17 +74,17 @@ namespace ECommerceAPI.Repositories
             Produto produtoEcontrado = _context.Produtos.Find(id); // O Find so procura pela chave primaria
 
             // 2. Tratar; se informar um id que nao existe mostra um erro
-            if (produtoEcontrado == null) 
+            if (produtoEcontrado == null)
             {
                 throw new Exception();
             }
-            
+
             // 3. Excluir o produto
             _context.Produtos.Remove(produtoEcontrado);
 
             // 4. Salvando a alteracao
             _context.SaveChanges();
-        
+
         }
 
         public List<Produto> ListarTodos()
@@ -81,4 +93,6 @@ namespace ECommerceAPI.Repositories
             return _context.Produtos.ToList();
         }
     }
+    
+
 }

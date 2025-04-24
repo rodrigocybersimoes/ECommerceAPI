@@ -1,4 +1,5 @@
-﻿using ECommerceAPI.Models;
+﻿using ECommerceAPI.DTO;
+using ECommerceAPI.Models;
 
 namespace ECommerceAPI.Interfaces
 {
@@ -10,10 +11,10 @@ namespace ECommerceAPI.Interfaces
 
         // RECEBE UM IDENTIFICADOR E RETORNA O PRODUTO CORRESPONDENTE (Leitura)
         Cliente BuscarPorId(int id);
-        Cliente BuscarPorEmailSenha(string email, string senha);
+        Cliente? BuscarPorEmailSenha(string email, string senha);
 
         // C - CREATE (Cadastro)
-        void Cadastrar(Cliente cliente);
+        void Cadastrar(CadastrarClientesDto cliente);
 
         // U - ATUALIZAR (Coloco quem quero atualizar e qual sera o novo produto que vai substituir o antigo)
         void Atualizar(int id, Cliente cliente);
@@ -21,5 +22,7 @@ namespace ECommerceAPI.Interfaces
         // D - Deletar
         // Recebo o identificador dr quem quero excluir
         void Deletar(int id);
+
+        List<Cliente> BuscarClientePorNome(string nome);
     }
 }

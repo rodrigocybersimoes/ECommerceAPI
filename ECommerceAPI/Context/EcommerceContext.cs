@@ -51,6 +51,10 @@ public partial class EcommerceContext : DbContext
             entity.Property(e => e.Telefone)
                 .HasMaxLength(20)
                 .IsUnicode(false);
+            entity.Property(e => e.Senha)
+                .HasMaxLength(6)
+                .IsUnicode(false);
+
         });
 
         modelBuilder.Entity<ItemPedido>(entity =>

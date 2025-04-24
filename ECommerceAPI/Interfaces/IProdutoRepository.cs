@@ -1,4 +1,5 @@
-﻿using ECommerceAPI.Models;
+﻿using ECommerceAPI.DTO;
+using ECommerceAPI.Models;
 
 namespace ECommerceAPI.Interfaces
 {
@@ -13,7 +14,7 @@ namespace ECommerceAPI.Interfaces
         Produto BuscarPorId(int id);
 
         // C - CREATE (Cadastro)
-        void Cadastrar(Produto produto);
+        void Cadastrar(CadastrarProdutoDto produto);
 
         // U - ATUALIZAR (Coloco quem quero atualizar e qual sera o novo produto que vai substituir o antigo)
         void Atualizar(int id, Produto produto);

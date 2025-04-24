@@ -36,5 +36,6 @@ namespace ECommerceAPI.Repositories
         {
             return _context.ItemPedidos.ToList();
         }
+
     }
 }

@@ -1,4 +1,5 @@
 ﻿using ECommerceAPI.Context;
+using ECommerceAPI.DTO;
 using ECommerceAPI.Interfaces;
 using ECommerceAPI.Models;
 using ECommerceAPI.Repositories;
@@ -22,7 +23,7 @@ namespace ECommerceAPI.Controllers
         // Listar na internet e chamado de GET, padrao da internet.
         // CADASTRAR PRODUTO
         [HttpPost]
-        public IActionResult CadastrarProduto(Produto prod)
+        public IActionResult CadastrarProduto(CadastrarProdutoDto prod)
         {
             // 1. Coloco o produto no BD
             _produtoRepository.Cadastrar(prod);

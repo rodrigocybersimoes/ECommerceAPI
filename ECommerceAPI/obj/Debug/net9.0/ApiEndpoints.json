@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "cliente",
-        "Type": "ECommerceAPI.Models.Cliente",
+        "Type": "ECommerceAPI.DTO.CadastrarClientesDto",
         "IsRequired": true
       }
     ],
@@ -23,6 +23,27 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ECommerceAPI.Controllers.ClienteController",
+    "Method": "Login",
+    "RelativePath": "api/Cliente/{email}/{senha}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "senha",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -98,7 +119,7 @@
     "Parameters": [
       {
         "Name": "pag",
-        "Type": "ECommerceAPI.Models.Pagamento",
+        "Type": "ECommerceAPI.DTO.CadastrarPagamentoDto",
         "IsRequired": true
       }
     ],
@@ -187,7 +208,7 @@
     "Parameters": [
       {
         "Name": "prod",
-        "Type": "ECommerceAPI.Models.Produto",
+        "Type": "ECommerceAPI.DTO.CadastrarProdutoDto",
         "IsRequired": true
       }
     ],
@@ -251,6 +272,22 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ECommerceAPI.Controllers.ClienteController",
+    "Method": "BuscarPorNome",
+    "RelativePath": "buscar/{nome}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nome",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

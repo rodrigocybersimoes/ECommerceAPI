@@ -1,4 +1,5 @@
 ﻿using ECommerceAPI.Context;
+using ECommerceAPI.DTO;
 using ECommerceAPI.Interfaces;
 using ECommerceAPI.Models;
 
@@ -6,13 +7,11 @@ using ECommerceAPI.Models;
 // 1. HERDAR DA INTERCE
 // 2. SEGURAR O CONTROL E CLICAR INomeRepository e clica em "Implementar Interface"
 // 3. INJETAR O CONTEXTO
-// 4. 
-// 5. 
-// 6. 
-// 7. 
 
 namespace ECommerceAPI.Repositories
-{//                                 2. Clicando em IClineteRepository segurando o cntrl e clicar em "Implementar a Interface"
+
+{
+    //                                 2. Clicando em IClineteRepository segurando o cntrl e clicar em "Implementar a Interface"
     public class ClienteRepository : IClienteRepository // 1. HERDANDO DA INTERFACE
     {
         private readonly EcommerceContext _context; // 3. INJETANDO O CONTEXTO
@@ -38,9 +37,20 @@ namespace ECommerceAPI.Repositories
 
         }
 
+        public List<Cliente> BuscarClientePorNome(string nome)
+        {
+                                                //Where --> Traz todos que atendem a uma condicao    
+            var listaClientes = _context.Clientes.Where(c => c.NomeCompleto == nome)
+                .ToList();
+
+            return listaClientes;
+        }
+
         public Cliente? BuscarPorEmailSenha(string email, string senha)
         {
             var clienteEncontrado = _context.Clientes.FirstOrDefault(c => c.Email == email && c.Senha == senha);
+
+            return clienteEncontrado;
         }
 
         public Cliente BuscarPorId(int id)
@@ -48,9 +58,18 @@ namespace ECommerceAPI.Repositories
             return _context.Clientes.FirstOrDefault(p => p.Idcliente == id);
         }
 
-        public void Cadastrar(Cliente cliente)
+        public void Cadastrar(CadastrarClientesDto clientedto)
         {
-            _context.Clientes.Add(cliente);
+            Cliente clienteCadastro = new Cliente
+            {
+                NomeCompleto = clientedto.NomeCompleto,
+                Email = clientedto.Email,
+                Telefone = clientedto.Telefone,
+                Endereco = clientedto.Endereco,
+                DataCadastro = clientedto.DataCadastro,
+                Senha = clientedto.Senha
+            };
+            _context.Clientes.Add(clienteCadastro);
 
             _context.SaveChanges();
         }
@@ -75,7 +94,9 @@ namespace ECommerceAPI.Repositories
 
         public List<Cliente> ListarTodos()
         {
-            return _context.Clientes.ToList();
+            return _context.Clientes
+                .OrderBy(c => c.NomeCompleto)
+                .ToList();
         }
     }
 }
