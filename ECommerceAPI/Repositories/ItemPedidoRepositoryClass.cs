@@ -14,12 +14,22 @@ namespace ECommerceAPI.Repositories
 
         public void Atualizar(int id, ItemPedido itemPedido)
         {
-            throw new NotImplementedException();
+            ItemPedido itemPedidoCadastro = _context.ItemPedidos.Find();
+
+            if (itemPedidoCadastro == null)
+            {
+                throw new Exception();
+            }
+
+            itemPedidoCadastro.IditemPedido = itemPedido.IditemPedido;
+            itemPedidoCadastro.Quantidade = itemPedido.Quantidade;
+            itemPedidoCadastro.Idproduto = itemPedido.Idproduto;
+            itemPedidoCadastro.Idpedido = itemPedido.Idpedido;
         }
 
         public ItemPedido BuscarPorId(int id)
         {
-            throw new NotImplementedException();
+            return _context.ItemPedidos.FirstOrDefault(p => p.IditemPedido == id);
         }
 
         public void Cadastrar(ItemPedido itemPedido)

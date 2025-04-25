@@ -671,6 +671,11 @@
             "format": "int32",
             "nullable": true
           },
+          "idproduto": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
           "idclienteNavigation": {
             "$ref": "#/components/schemas/Cliente"
           },

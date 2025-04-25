@@ -2,6 +2,7 @@
 using ECommerceAPI.DTO;
 using ECommerceAPI.Interfaces;
 using ECommerceAPI.Models;
+using ECommerceAPI.ViewModels;
 
 // ORDEM DE PASSOS:
 // 1. HERDAR DA INTERCE
@@ -11,7 +12,7 @@ using ECommerceAPI.Models;
 namespace ECommerceAPI.Repositories
 
 {
-    //                                 2. Clicando em IClineteRepository segurando o cntrl e clicar em "Implementar a Interface"
+    //                2. Clicando em IClienteRepository segurando o cntrl e clicar em "Implementar a Interface"
     public class ClienteRepository : IClienteRepository // 1. HERDANDO DA INTERFACE
     {
         private readonly EcommerceContext _context; // 3. INJETANDO O CONTEXTO
@@ -92,10 +93,21 @@ namespace ECommerceAPI.Repositories
             _context.SaveChanges();
         }
 
-        public List<Cliente> ListarTodos()
+        public List<ListarClienteViewModel> ListarTodos()
         {
+
             return _context.Clientes
                 .OrderBy(c => c.NomeCompleto)
+                // SELECIONA QUAIS CAMPOS EU QUERO PEGAR
+                .Select(
+                    c => new ListarClienteViewModel
+                    {
+                        Idcliente = c.Idcliente,
+                        NomeCompleto = c.NomeCompleto,
+                        Email = c.Email,
+                        Telefone= c.Telefone,
+                        Endereco = c.Endereco
+                    }) 
                 .ToList();
         }
     }

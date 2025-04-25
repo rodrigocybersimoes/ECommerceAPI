@@ -1,4 +1,5 @@
-﻿using ECommerceAPI.Models;
+﻿using ECommerceAPI.DTO;
+using ECommerceAPI.Models;
 
 namespace ECommerceAPI.Interfaces
 {
@@ -12,13 +13,13 @@ namespace ECommerceAPI.Interfaces
         Pedido BuscarPorId(int id);
 
         // C - CREATE (Cadastro)
-        void Cadastrar(Pedido pedido);
+        void Cadastrar(CadastrarPedidoDto pedido);
 
         // U - ATUALIZAR (Coloco quem quero atualizar e qual sera o novo produto que vai substituir o antigo)
         void Atualizar(int id, Pedido pedido);
 
         // D - Deletar
-        // Recebo o identificador dr quem quero excluir
+        // Recebo o identificador de quem quero excluir
         void Deletar(int id);
     }
 }
