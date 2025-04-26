@@ -1,4 +1,5 @@
 ﻿using ECommerceAPI.Context;
+using ECommerceAPI.DTO;
 using ECommerceAPI.Interfaces;
 using ECommerceAPI.Models;
 
@@ -32,14 +33,33 @@ namespace ECommerceAPI.Repositories
             return _context.ItemPedidos.FirstOrDefault(p => p.IditemPedido == id);
         }
 
-        public void Cadastrar(ItemPedido itemPedido)
+        public void Cadastrar(CadastrarItemPedidoDto itemPedido)
         {
-            _context.ItemPedidos.Add(itemPedido);
+            ItemPedido itemPedidoCadastro = new ItemPedido
+            {
+                Quantidade = itemPedido.Quantidade,
+                Idproduto = itemPedido.Idproduto,
+                Idpedido = itemPedido.Idpedido,
+            };
+
+            _context.ItemPedidos.Add(itemPedidoCadastro);
+
+            _context.SaveChanges();
         }
 
         public void Deletar(int id)
         {
-            throw new NotImplementedException();
+            
+            ItemPedido itemPedidoEcontrado = _context.ItemPedidos.Find(id);
+
+            if (itemPedidoEcontrado == null)
+            {
+                throw new Exception();
+            }
+
+            _context.ItemPedidos.Remove(itemPedidoEcontrado);
+
+            _context.SaveChanges();
         }
 
         public List<ItemPedido> ListarTodos()

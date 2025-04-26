@@ -16,8 +16,6 @@ public partial class Pedido
 
     public int? Idcliente { get; set; }
 
-    public int? Idproduto { get; set; }
-
     public virtual Cliente? IdclienteNavigation { get; set; }
 
     public virtual ICollection<ItemPedido> ItemPedidos { get; set; } = new List<ItemPedido>();

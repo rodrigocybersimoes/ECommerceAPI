@@ -2,6 +2,7 @@
 using ECommerceAPI.DTO;
 using ECommerceAPI.Interfaces;
 using ECommerceAPI.Models;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace ECommerceAPI.Repositories
@@ -54,7 +55,6 @@ namespace ECommerceAPI.Repositories
                 var itemPedido = new ItemPedido
                 {
                     Idpedido = pedido.Idpedido,
-                    Idproduto = pedido.Idproduto,
                     Quantidade = 0
                 };
 
@@ -75,7 +75,10 @@ namespace ECommerceAPI.Repositories
 
         public List<Pedido> ListarTodos()
         {
-            return _context.Pedidos.ToList();
+            return _context.Pedidos
+                .Include(p => p.ItemPedidos)
+                .ThenInclude(p => p.IdprodutoNavigation)
+                .ToList();
         }
     }
 }

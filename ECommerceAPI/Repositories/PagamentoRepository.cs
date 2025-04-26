@@ -66,7 +66,6 @@ namespace ECommerceAPI.Repositories
         public List<Pagamento> ListarTodos()
         {
             return _context.Pagamentos
-                .Include(p => p.IdpedidoNavigation)
                 .ToList();
         }
     }
